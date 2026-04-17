@@ -1,0 +1,31 @@
+{
+  "pText": " Featured Projects View All Projects ",
+  "sText": " Technical Skills ",
+  "data": {
+    "name": "Lomash Srivastava",
+    "role": "AI-Powered Full-Stack Developer",
+    "about": "",
+    "skills": {
+      "frontend": [],
+      "backend": [],
+      "database": [],
+      "tools": []
+    },
+    "projects": [],
+    "experience": [],
+    "education": [],
+    "certifications": [
+      {
+        "title": "Example Certification 1",
+        "issuer": "Institution",
+        "link": "#"
+      }
+    ],
+    "socials": {
+      "github": "https://github.com/lomashsrivastava",
+      "linkedin": "https://www.linkedin.com/in/lomashsrivastava",
+      "email": "lomashgroups@gmail.com"
+    },
+    "accessKey": "3dd0cc07-31d0-42b6-bec8-c00a172a2183"
+  }
+}
