@@ -1,5 +1,15 @@
 # Lomash Portfolio - High-Performance Developer Portfolio
 
+<div align="center">
+  <h3>
+    <a href="https://lomashsrivastava.netlify.app/">🚀 View Live Demo</a>
+  </h3>
+  <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge&logo=netlify" alt="Live Status">
+  <img src="https://img.shields.io/badge/Deployment-Portfolio-blue?style=for-the-badge&logo=react" alt="Deployment">
+</div>
+
+---
+
 ## Overview
 A premium, high-tech portfolio built with React 19, Vite, and Framer Motion. This project features a futuristic "HUD" themed interface with complex orbital animations, a dynamic projects grid, and a high-performance interactive experience for showcasing full-stack development skills.
 
