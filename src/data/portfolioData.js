@@ -146,7 +146,7 @@ export const portfolioData = {
         description: "A high-performance modern developer portfolio with a futuristic HUD theme, orbital skill rings, and advanced Framer Motion animations. Optimized for 60FPS scrolling and production-ready deployments.",
         price: "Featured",
         github: "https://github.com/lomashsrivastava/portfolio-react-one",
-        demo: "https://portfolio-react-one.netlify.app/"
+        demo: "https://lomashsrivastava.netlify.app/"
       },
       {
         title: "LOMASH HR CRM SYSTEM",
