@@ -72,3 +72,12 @@ The application will be accessible at [http://localhost:3000](http://localhost:3
 Independent Project by [Lomash Srivastava](https://github.com/lomashsrivastava).
 
 Designed And Developed By Lomash Srivastava
+
+
+![Stars](https://img.shields.io/github/stars/lomashsrivastava/=social)
+![Forks](https://img.shields.io/github/forks/lomashsrivastava/=social)
+
+
+## ?? Screenshots
+Add screenshots here (./screenshots folder)
+
