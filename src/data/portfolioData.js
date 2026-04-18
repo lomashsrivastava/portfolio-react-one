@@ -34,7 +34,7 @@ export const portfolioData = {
     bio1: "I am a Full Stack Developer with 1 year of experience as an intern. I love building websites and working with technologies like React, Node.js, and Python. I have built several projects where I created both the user interface and the backend logic. I am good at solving problems and I am always looking for new opportunities to learn and grow as a developer.",
     bio2: "",
     highlights: [
-      { number: "04+", title: "Web Apps", description: "Built 4+ web apps and made them run faster." },
+      { number: "10+", title: "Web Apps", description: "Built 10+ web apps and made them run faster." },
       { number: "30%", title: "Database Speed", description: "Made database queries run much smoother." },
       { number: "256+", title: "Teamwork", description: "Managed large groups of people to finish projects on time." },
       { number: "25%", title: "Saved Time", description: "Automated manual work to save hours every week." }

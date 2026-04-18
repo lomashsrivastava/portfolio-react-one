@@ -1,16 +1,62 @@
-# React + Vite
+# Lomash Portfolio - High-Performance Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A premium, high-tech portfolio built with React 19, Vite, and Framer Motion. This project features a futuristic "HUD" themed interface with complex orbital animations, a dynamic projects grid, and a high-performance interactive experience for showcasing full-stack development skills.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
+- **Frontend**: React 19, Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React, React Icons
+- **Build Tool**: Vite
+- **Deployment**: Netlify / Docker
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Setup & Installation
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/lomashsrivastava/portfolio-react-one.git
+   cd portfolio-react-one
+   ```
 
-## React Compiler
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. **Run Development Server**:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5174](http://localhost:5174) in your browser.
 
-## Expanding the ESLint configuration
+## 📦 Build Instructions
+To create a production-ready build:
+```bash
+npm run build
+```
+The output will be generated in the `dist/` directory.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌐 Netlify Deployment
+This project is pre-configured for Netlify deployment via `netlify.toml`.
+1. Connect your GitHub repository to Netlify.
+2. Use the following build settings:
+   - **Build Command**: `npm run build`
+   - **Publish Directory**: `dist`
+3. Netlify will automatically handle the SPA routing redirects.
+
+## 🐳 Docker Usage
+A multi-stage `Dockerfile` is included for production-grade containerization.
+
+### To build and run with Docker:
+```bash
+docker build -t portfolio-app .
+docker run -p 3000:3000 portfolio-app
+```
+
+### To use Docker Compose:
+```bash
+docker-compose up --build
+```
+The application will be accessible at [http://localhost:3000](http://localhost:3000).
+
+## 📄 License
+Independent Project by [Lomash Srivastava](https://github.com/lomashsrivastava).

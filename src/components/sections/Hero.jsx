@@ -6,9 +6,20 @@ import {
   MapPin, 
   Mail, 
   Code2, 
-  Zap
+  Zap,
+  Star
 } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaWhatsapp, FaAws } from 'react-icons/fa6';
+import { 
+  SiReact, 
+  SiJavascript, 
+  SiNodedotjs, 
+  SiPython, 
+  SiDocker, 
+  SiPytorch, 
+  SiNextdotjs,
+  SiTailwindcss
+} from 'react-icons/si';
 import { portfolioData } from '../../data/portfolioData';
 
 const ROLES = [
@@ -82,6 +93,79 @@ function RoleCycler() {
         />
       </motion.p>
     </AnimatePresence>
+  );
+}
+
+const MINI_SKILLS = [
+  { name: 'React',     icon: SiReact,      color: '#61DAFB' },
+  { name: 'JS',        icon: SiJavascript, color: '#F7DF1E' },
+  { name: 'Node',      icon: SiNodedotjs,  color: '#339933' },
+  { name: 'Python',    icon: SiPython,     color: '#3776AB' },
+  { name: 'Next.js',   icon: SiNextdotjs,  color: '#ffffff' },
+  { name: 'AWS',       icon: FaAws,        color: '#FF9900' },
+  { name: 'Docker',    icon: SiDocker,     color: '#2496ED' },
+  { name: 'PyTorch',   icon: SiPytorch,    color: '#EE4C2C' },
+];
+
+function MiniSkillsRing() {
+  return (
+    <div className="relative w-full h-[140px] flex items-center justify-center">
+      {/* Centered anchor point */}
+      <div className="relative">
+        
+        {/* Central fixed focus point (Energy Chip) */}
+        <motion.div 
+          style={{ x: "-50%", y: "-50%", willChange: "transform, scale, opacity" }}
+          animate={{ scale: [1, 1.25, 1], opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-0 left-0 w-9 h-9 rounded-full bg-primary/22 border border-primary/45 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(0,243,255,0.3)]"
+        >
+          <Zap size={16} className="text-primary" />
+        </motion.div>
+
+        {/* Outer Rotating ring of skills */}
+        <motion.div 
+          style={{ x: "-50%", y: "-50%", willChange: "transform" }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 32, repeat: Infinity, ease: 'linear' }}
+          className="absolute top-0 left-0 w-[115px] h-[115px]"
+        >
+          {MINI_SKILLS.map((skill, i) => {
+            const angle = (360 / MINI_SKILLS.length) * i;
+            const radius = 58;
+            const x = Math.cos((angle * Math.PI) / 180) * radius;
+            const y = Math.sin((angle * Math.PI) / 180) * radius;
+            const Icon = skill.icon;
+
+            return (
+              <div
+                key={skill.name}
+                className="absolute left-1/2 top-1/2"
+                style={{ 
+                  transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                  willChange: "transform" 
+                }}
+              >
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 32, repeat: Infinity, ease: 'linear' }}
+                  style={{ willChange: "transform" }}
+                  className="w-7 h-7 rounded-full bg-[#050512] border flex items-center justify-center shadow-lg group/skill relative transition-colors duration-300"
+                  style={{ borderColor: `${skill.color}55`, color: skill.color }}
+                >
+                  <Icon size={14} />
+                  
+                  {/* Tooltip on hover */}
+                  <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover/skill:opacity-100 transition-opacity bg-darker/90 border border-white/20 px-1.5 py-0.5 rounded text-[8px] font-orbitron pointer-events-none z-50 whitespace-nowrap text-white">
+                    {skill.name}
+                  </div>
+                </motion.div>
+              </div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </div>
   );
 }
 
@@ -164,15 +248,37 @@ export default function Hero() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <a href={contact?.socials?.github} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 hover:scale-110 transition-all text-primary">
-                    <FaGithub size={18} />
-                  </a>
-                  <a href={contact?.socials?.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 hover:scale-110 transition-all text-primary">
-                    <FaLinkedin size={18} />
-                  </a>
-                  <a href={contact?.socials?.whatsapp} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 hover:scale-110 transition-all text-primary">
-                    <FaWhatsapp size={18} />
-                  </a>
+                  {[
+                    { Icon: FaGithub, link: contact?.socials?.github, color: '#00f3ff' },
+                    { Icon: FaLinkedin, link: contact?.socials?.linkedin, color: '#0077b5' },
+                    { Icon: FaWhatsapp, link: contact?.socials?.whatsapp, color: '#25d366' }
+                  ].map(({ Icon, link, color }, idx) => (
+                    <motion.a 
+                      key={idx}
+                      href={link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      whileHover={{ scale: 1.15, rotate: 5 }}
+                      animate={{ 
+                        boxShadow: [
+                          `0 0 0px ${color}00`,
+                          `0 0 12px ${color}66`,
+                          `0 0 0px ${color}00`
+                        ],
+                        borderColor: [`${color}33`, `${color}aa`, `${color}33`]
+                      }}
+                      transition={{ 
+                        duration: 3.5, 
+                        repeat: Infinity, 
+                        delay: idx * 0.7,
+                        ease: "linear"
+                      }}
+                      style={{ color, willChange: "transform, box-shadow" }}
+                      className="p-2 bg-white/5 border rounded-full transition-colors flex items-center justify-center"
+                    >
+                      <Icon size={18} />
+                    </motion.a>
+                  ))}
                 </div>
               </div>
               
@@ -198,19 +304,8 @@ export default function Hero() {
                   "{hero?.description}"
                 </p>
                 
-                <div className="grid grid-cols-2 gap-2 mt-auto">
-                  {(skills?.items || []).slice(0, 4).map((skill) => (
-                    <div key={skill.name} className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-2.5 py-2.5 rounded-xl text-[9px] font-bold text-white/60 hover:border-primary transition-all">
-                      <Zap size={11} className="text-primary" /> {skill.name}
-                    </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-2 gap-2 mt-2">
-                  {['Docker', 'AWS', 'PyTorch', 'Next.js'].map((tech) => (
-                    <div key={tech} className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-2.5 py-2.5 rounded-xl text-[9px] font-bold text-white/40 hover:border-secondary transition-all">
-                      <Code2 size={10} className="text-secondary" /> {tech}
-                    </div>
-                  ))}
+                <div className="flex-1 flex items-center justify-center py-2">
+                  <MiniSkillsRing />
                 </div>
               </div>
               

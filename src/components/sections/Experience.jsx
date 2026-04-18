@@ -34,7 +34,7 @@ const EXPERIENCES = [
     type: 'freelance',
     title: 'Freelance Full-Stack Developer',
     company: 'Remote — Independent',
-    date: '2022 – Present',
+    date: '2024 to Present',
     duration: '2+ Years',
     accent: '#a855f7',
     accent2: '#ff00ff',

@@ -67,9 +67,31 @@
   100% { filter: drop-shadow(0 0 15px rgba(0, 243, 255, 0.8)); }
 }
 
-.animate-grid-move { animation: gridMove 20s linear infinite; }
-.animate-particle-float { animation: particleFloat 12s linear infinite; }
-.animate-border-spin { animation: borderSpin 6s linear infinite; }
-.animate-avatar-pulse { animation: avatarPulse 2s infinite alternate; }
-.animate-spin-ring { animation: spinRing 8s linear infinite; }
-.animate-text-glow { animation: textGlow 3s infinite alternate; }
+.animate-grid-move { 
+  animation: gridMove 20s linear infinite; 
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.animate-particle-float { 
+  animation: particleFloat 12s linear infinite; 
+  will-change: background-position;
+}
+.animate-border-spin { 
+  animation: borderSpin 6s linear infinite; 
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.animate-avatar-pulse { 
+  animation: avatarPulse 2s infinite alternate; 
+  will-change: box-shadow, border-width;
+}
+.animate-spin-ring { 
+  animation: spinRing 8s linear infinite; 
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.animate-text-glow { 
+  animation: textGlow 3s infinite alternate; 
+  will-change: filter;
+}
