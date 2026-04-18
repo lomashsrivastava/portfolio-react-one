@@ -70,3 +70,5 @@ The application will be accessible at [http://localhost:3000](http://localhost:3
 
 ## 📄 License
 Independent Project by [Lomash Srivastava](https://github.com/lomashsrivastava).
+
+Designed And Developed By Lomash Srivastava
