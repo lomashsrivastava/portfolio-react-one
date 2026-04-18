@@ -140,6 +140,15 @@ export const portfolioData = {
     title: "Featured Projects",
     items: [
       {
+        title: "Modern HUD Portfolio (Vite + React)",
+        category: "Advanced UI/UX Portfolio",
+        tech: ["React 19", "Vite", "Framer Motion", "Tailwind CSS", "Netlify", "Docker"],
+        description: "A high-performance modern developer portfolio with a futuristic HUD theme, orbital skill rings, and advanced Framer Motion animations. Optimized for 60FPS scrolling and production-ready deployments.",
+        price: "Featured",
+        github: "https://github.com/lomashsrivastava/portfolio-react-one",
+        demo: "https://portfolio-react-one.netlify.app/"
+      },
+      {
         title: "LOMASH HR CRM SYSTEM",
         category: "Full Stack Web App",
         tech: ["React 19 (TypeScript)", "Vite", "Node.js", "Express", "MongoDB", "Django", "SpaCy"],
