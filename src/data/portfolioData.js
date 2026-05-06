@@ -139,6 +139,27 @@ export const portfolioData = {
   projects: {
     title: "Featured Projects",
     items: [
+        {
+          title: "AI-Powered Employee Management System (LEMS)",
+          category: "Enterprise Full-Stack SaaS + AI HR Platform",
+          tech: [
+            "React 19",
+            "Vite",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Socket.io",
+            "JWT Authentication",
+            "Python FastAPI",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Docker",
+            "Redis"],
+          description: "A production-grade AI-powered Employee Management System designed for modern HR operations. It enables real-time attendance tracking, automated payroll processing, role-based access control, and AI-driven HR analytics including attrition prediction. Built with a scalable architecture and a modern futuristic UI for enterprise-level workforce management.",
+          price: "Featured",
+          github: "https://github.com/lomashsrivastava/Smart-Employee-Management-System-App",
+          demo: "https://lsems.netlify.app/login"
+      },
       {
         title: "Modern HUD Portfolio (Vite + React)",
         category: "Advanced UI/UX Portfolio",
