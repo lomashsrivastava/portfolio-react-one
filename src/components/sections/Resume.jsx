@@ -90,14 +90,14 @@ const Resume = () => {
               <AnimatedBorderBox className="rounded-2xl group cursor-zoom-in" radius={20} duration={6} delay={0}>
                 <motion.div
                   onClick={() => setIsZoomed(true)}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ y: -5 }}
                   className="relative aspect-[1/1.414] w-full max-w-[400px] bg-[#0a0f1a] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]"
                   style={{ touchAction: 'pan-y' }}
                 >
                   <img
                     src="/assets/img/resume-preview.jpg"
                     alt="Lomash Srivastava Resume"
-                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                    className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                   />
                   
                   {/* Subtle Gradient Overlay */}
