@@ -153,7 +153,7 @@ const Resume = () => {
                   className="w-full sm:w-auto"
                 >
                   <a
-                    href="/Resume.pdf"
+                    href="/L2.pdf"
                     download="Lomash_Srivastava_Resume.pdf"
                     className="flex items-center justify-center gap-6 px-12 py-5 rounded-2xl font-black font-orbitron text-[12px] tracking-[0.2em] transition-all text-white group relative overflow-hidden"
                     style={{

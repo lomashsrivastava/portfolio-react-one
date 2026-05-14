@@ -322,7 +322,7 @@ export default function Hero() {
                   </a>
                   
                   <a 
-                    href="/assets/pdf/Resume.pdf" 
+                    href="/assets/pdf/L2.pdf" 
                     download
                     className="group/btn relative w-full h-12 rounded-full border-2 border-secondary/50 flex items-center justify-center gap-2 overflow-hidden transition-all duration-500 hover:shadow-[0_0_15px_#ff00ff] hover:bg-secondary text-white hover:text-darker"
                   >
